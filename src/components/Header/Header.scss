@@ -1,5 +1,9 @@
+@import "../App.scss";
+
 .header{
-    margin: 0 auto;
+    font-family: $base-fontMain;
+    font-size: $base-fontSize;
+    margin: 10px auto;
     background-color: #282c34;
     color: white;
     height: 30vh;

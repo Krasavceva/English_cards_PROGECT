@@ -1,0 +1,27 @@
+@import "../App.scss";
+
+.btn{
+    font-family: $base-fontText;
+    align-self: center;
+    color: white;
+    font-weight:bold;
+    width: fit-content;
+    margin: 30px 0;
+    padding: 7px;
+    color: $base-color2;
+    font-size: $base-fontSize;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 $base-color2;
+}
+.btn:hover{
+    border: 1px solid $base-color2;
+    background-color: $base-color;
+    color:white;
+    cursor: pointer; 
+ }
+ .btn:active{
+    cursor: pointer; 
+    box-shadow: 0 1px 0 white;
+    transition: all 0.1s ease 0s;
+}

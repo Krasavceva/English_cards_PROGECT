@@ -1,0 +1,27 @@
+@import "../App.scss";
+
+.card__container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: $base-fontText;
+    margin: 10px auto;
+}
+    
+
+.card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color:$base-color; 
+    font-size: $text-Size;
+    background-color: aliceblue;
+    height: 50vh;
+    width: 45vw;
+    border-radius: 5px;
+    border: $border;
+    padding: 5px;
+    
+}
+
+

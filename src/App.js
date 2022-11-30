@@ -1,7 +1,10 @@
 import React from "react";
 import "./App.css";
+import * as classNames from "classnames";
 import Header from "./components/Header/Header";
 import Card from "./components/Card/Card";
+import Button from "./components/Button/Button";
+import Table from "./components/Table/Table";
 import Footer from "./components/Footer/Footer";
 
 const words = [
@@ -29,14 +32,6 @@ const words = [
     tags: "",
     tags_json: '[""]',
   },
-  {
-    id: "12975",
-    english: "time",
-    transcription: "[taɪm]",
-    russian: "время",
-    tags: "na",
-    tags_json: '["na"]',
-  },
 ];
 
 function App() {
@@ -53,7 +48,7 @@ function App() {
           ></Card>
         ))}
       </div>
-
+      <Table />
       <Footer></Footer>
     </div>
   );

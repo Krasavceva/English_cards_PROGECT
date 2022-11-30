@@ -1,0 +1,46 @@
+@import "../App.scss";
+
+.wrapper{
+    display: flex;
+    justify-content: center;  
+    align-content: center ;  
+    min-height: 10vh;
+    flex-direction: column;
+    margin-left: 5vw;
+}
+
+.row{
+    display: -ms-grid;
+    display: flex;
+    align-content: flex-end;
+    width: 90vw;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    background-color: $base-color2;
+   
+
+}
+.title__table{
+  text-align: center; 
+  color: white; 
+  font-family: $base-fontText;
+  font-size: $base-fontSize;
+  
+
+}
+
+.title{
+    font-family: $base-fontText;
+    font-size: $small-text;
+    align-self: center;
+    color: $base-color;
+    width: fit-content;
+    margin: 15px 5px;
+    border: 1px solid $border;
+    box-shadow: 0 1px 0 $base-color;
+    color: white;
+}
+
+
+

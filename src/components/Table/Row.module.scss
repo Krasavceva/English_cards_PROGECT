@@ -1,0 +1,61 @@
+@import "../App.scss";
+
+.row{
+    display: -ms-grid;
+    width: 90vw;
+
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    color: white;
+    font-size: larger;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-bottom: 1px solid black;  
+    padding: 7px 0;
+
+}
+
+button{
+    font-family: $base-fontText;
+    box-shadow: 0 2px 0 $base-color2;
+    border-radius: 5px;
+    padding: 5px;
+    
+    height: fit-content;
+    border: 1px solid black;
+    width: 6vw;
+}
+
+button:active{
+    cursor: pointer; 
+    box-shadow: 0 1px 0 white;
+    transition: all 0.1s ease 0s;
+}
+
+
+.edit__btn{
+    background-color: green;
+}
+.edit__btn:hover{
+    background-color: rgb(144, 219, 31);
+}
+.del__btn,
+.cancel__btn{
+background-color: rgb(211, 122, 122);
+}
+.del__btn:hover,
+.cancel__btn:hover{
+    background-color: red;
+}
+.cancel__btn{
+    color: aliceblue;
+}
+input{
+    padding: 5px 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 4px;
+}
+.save__btn{
+    background-color: $base-color2;
+    color: aliceblue;
+}
