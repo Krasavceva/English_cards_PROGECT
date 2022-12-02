@@ -1,18 +1,29 @@
 import React from "react";
+import { useState } from 'react';
 import styles from "./Card.module.scss";
-import Button from "../Button/Button";
+
+
 
 
 
 export default function Card(props) {
+    const [isTranslate, setIsTranslate] = useState(false);
+
+    function onClick(){
+        setIsTranslate(!isTranslate);
+    }
+
+
+
     return(
         <div className={styles.card__container}>
             <div className={styles.card}>
-                <div className="english">{props.english}</div>
-                <div className="transcription">транскрипция: {props.transcription}</div>
-                <div className="russian">{props.russian}</div>
-                <div className="tags">{props.tags}</div>
-                <Button className={styles.btn}/>
+                <p className={styles.english}>{props.english}</p>
+                <p className={styles.transcription}>{props.transcription}</p>
+                {isTranslate
+                ? <div className={styles.russian} onClick={onClick}>{props.russian}</div>
+                : <button className={styles.btn} onClick={onClick}>Проверить</button>
+                }
             </div>
             
         </div>

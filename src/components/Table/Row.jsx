@@ -26,8 +26,8 @@ export default function Row(props) {
           <td><input type="text" value={inputText.transcription} name={transcription}/></td>
           <td><input type="text" value={inputText.russian} name={russian}/></td>
           <td><input type="text" value={inputText.tags} name={tags}/></td>
-          <td><button className={styles.save__btn}>Сохранить</button>
-          <button onClick={onCancelClick} className={styles.cancel__btn}>Выход</button></td>
+          <td><button className={styles.save__btn}>Save</button>
+          <button onClick={onCancelClick} className={styles.cancel__btn}>Exit</button></td>
         </tr>
     :
         <tr className ={styles.row} >
