@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 import * as classNames from "classnames";
 import Header from "./components/Header/Header";
 import Card from "./components/Card/Card";
@@ -39,8 +41,9 @@ function App() {
       <Header></Header>
 
       <div className="body">
-        {words.map((word) => (
+        {words.map((word, index) => (
           <Card
+            key={index}
             english={word.english}
             transcription={word.transcription}
             russian={word.russian}
