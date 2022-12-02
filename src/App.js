@@ -42,12 +42,7 @@ function App() {
 
       <div className="body">
         {words.map((word, index) => (
-          <Card
-            key={index}
-            english={word.english}
-            transcription={word.transcription}
-            russian={word.russian}
-          ></Card>
+          <Card key={index} {...word} />
         ))}
       </div>
       <Table />
