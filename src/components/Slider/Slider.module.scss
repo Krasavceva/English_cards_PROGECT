@@ -1,0 +1,25 @@
+@import "../App.scss";
+
+
+.gallery{
+    display: flex;
+    justify-content: center;
+}
+
+.img__back,
+.img__next{
+    width: 100%;
+}
+
+.btn__img{
+    width: 100%;
+    background-color:$base-color
+}
+.wordslist__index{
+    color: white;
+    text-align: center;
+}
+.img__done{
+    width: 30%;
+    text-align: center;
+}

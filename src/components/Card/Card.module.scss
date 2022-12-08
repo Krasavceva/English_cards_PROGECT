@@ -29,7 +29,9 @@
     color:$base-color2; 
     font-size: $text-Size;
 }
-
+.russian:hover{
+    cursor: pointer; 
+}
 .transcription{
 color: rgb(128, 128, 128);
 font-size: 18px;

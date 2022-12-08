@@ -2,8 +2,8 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-import * as classNames from "classnames";
 import Header from "./components/Header/Header";
+import Slider from "./components/Slider/Slider";
 import Card from "./components/Card/Card";
 import Table from "./components/Table/Table";
 import Footer from "./components/Footer/Footer";
@@ -25,21 +25,13 @@ const words = [
     tags: "pets",
     tags_json: '["pets"]',
   },
-  {
-    id: "12974",
-    english: " victory",
-    transcription: "[ˈvɪktərɪ]",
-    russian: "победа",
-    tags: "",
-    tags_json: '[""]',
-  },
 ];
 
 function App() {
   return (
     <div className="App">
       <Header></Header>
-
+      <Slider></Slider>
       <div className="body">
         {words.map((word, index) => (
           <Card key={index} {...word} />
