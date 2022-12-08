@@ -28,17 +28,28 @@ export default class Slider extends PureComponent {
   onNextClick = () => {
     let { currentIndex } = this.state;
     let nextIndex = currentIndex + 1;
-    this.setState({ currentIndex: nextIndex, pressed: false });
+    this.setState({
+      currentIndex: nextIndex,
+    });
   };
+
+  //условие,чтобы картинки перелистывались по кругу
+  //     let { currentIndex, words } = this.state;
+  //     let nextIndex = currentIndex + 1;
+
+  //     // if (nextIndex === words.length) {
+  //     //   nextIndex = 0;
+  //     // }
+
+  //     this.setState({
+  //       currentIndex: nextIndex,
+  //     });
+  //   };
 
   onPrevClick = () => {
     this.setState({
       currentIndex: this.state.currentIndex - 1,
-      pressed: false,
     });
-  };
-  setPressed = () => {
-    this.setState({ pressed: true });
   };
 
   render() {
@@ -55,7 +66,7 @@ export default class Slider extends PureComponent {
         <div className={styles.slider__container}>
           <h1>Game</h1>
           <div className={styles.gallery}>
-            <button>
+            <button className={styles.btn}>
               <img
                 src={arrowLeft}
                 alt="back"
@@ -69,7 +80,7 @@ export default class Slider extends PureComponent {
               translation={card.russian}
             />
 
-            <button>
+            <button className={styles.btn}>
               <img
                 src={arrowRight}
                 alt="next"
