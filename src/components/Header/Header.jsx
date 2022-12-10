@@ -1,28 +1,40 @@
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo1.png";
-import "../Header/Header.scss";
-
-
+import styles from "../Header/Header.module.scss";
 
 const Header = () => {
-    return(
-<header className="header">
-    <div className="header__menu">
-        <div className="slogan">
-            <a href="#" className="header__item item__main">THE LITTLE GENIUS WORKSHOP</a>
-        </div> 
-        <div className="menu">
-            <a href="#" className="header__item">Home</a>
-            <a href="#" className="header__item">Cards</a>
-            <a href="#" className="header__item">Game</a>
-            <a href="#" className="header__item">Vocabulary</a>
-            <a href="#" className="header__item">Contact</a>  
-        </div>      
-    </div>
-    <div className="header__logo">
-        <img src={logo} alt="logo" className="logo"/>
-    </div>
-</header>
-    )
+  return (
+    <header className={styles.header}>
+      <div className={styles.header__menu}>
+        <div className={styles.slogan}>
+          <Link to="/" className={styles.header__item}>
+            THE LITTLE GENIUS WORKSHOP
+          </Link>
+        </div>
+
+        <div className={styles.menu}>
+          <Link to="/" className={styles.header__item}>
+            Home
+          </Link>
+          <Link to="/game" className={styles.header__item}>
+            Game
+          </Link>
+          <Link to="/vocabulary" className={styles.header__item}>
+            Vocabulary
+          </Link>
+          <Link to="/contacts" className={styles.header__item}>
+            Contacts
+          </Link>
+        </div>
+      </div>
+
+      <div className={styles.header__logo}>
+        <Link to="/">
+          <img src={logo} alt="logo" className={styles.logo} />
+        </Link>
+      </div>
+    </header>
+  );
 };
 
 export default Header;

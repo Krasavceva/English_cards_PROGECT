@@ -6,7 +6,10 @@
     margin: 10px auto;
     background-color: #282c34;
     color: white;
-    height: 30vh;
+    margin-bottom: 50px;
+    position: sticky;
+    top: 0;
+    
 }
 .header__item:hover{
     text-decoration: underline;
@@ -24,9 +27,12 @@
     justify-content: space-between;
     padding: 15px;
 }
+.header__logo{
+    margin-top: 15px;
+}
 .logo{
-    max-width: 100%;
+    max-width: 35%;
     display: block;
-    margin-left: auto;
-    margin-right: auto
+    margin: 0 auto;
+    padding-bottom: 15px;
 }
