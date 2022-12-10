@@ -48,7 +48,10 @@ export default class Slider extends PureComponent {
 
   onPrevClick = () => {
     this.setState({
-      currentIndex: this.state.currentIndex - 1,
+      currentIndex:
+        this.state.currentIndex === 0
+          ? this.state.words.length - 1
+          : this.state.currentIndex - 1,
     });
   };
 
@@ -90,7 +93,7 @@ export default class Slider extends PureComponent {
             </button>
           </div>
           <div className={styles.wordslist__index}>
-            {currentIndex + "/" + words.length}
+            {currentIndex + 1 + "/" + words.length}
           </div>
         </div>
       );

@@ -7,6 +7,8 @@ import Slider from "./components/Slider/Slider";
 import Card from "./components/Card/Card";
 import Table from "./components/Table/Table";
 import Footer from "./components/Footer/Footer";
+import Gif from "./components/Error/Error";
+import Error from "./components/Error/Error";
 
 // const words = [
 //   {
@@ -35,6 +37,7 @@ function App() {
         <Route path="/" element={<Table />} />
         <Route path="/game" element={<Slider />} />
         <Route path="/vocabulary" element={<Table />} />
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
     </div>
