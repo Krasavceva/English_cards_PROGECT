@@ -1,16 +1,15 @@
-@import "../App.scss";
+@import "./App.scss";
 
 .row{
     display: -ms-grid;
     width: 90vw;
-
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    color: white;
+    color: $base-color2;
+    background-color: $base-color;
     font-size: larger;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border-bottom: 1px solid black;  
+    border-bottom: 1px solid $base-color2;  
     padding: 7px 0;
 
 }

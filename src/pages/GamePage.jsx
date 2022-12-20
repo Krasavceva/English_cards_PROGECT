@@ -1,10 +1,10 @@
 import React, { PureComponent } from "react";
-import Card from "../Card/Card";
-import styles from "./Slider.module.scss";
+import Card from "../components/Card/Card";
+import styles from "../assets/styles/GamePage.module.scss";
 
-import arrowLeft from "../../assets/images/arrow-left.png";
-import arrowRight from "../../assets/images/arrow-right.png";
-import done from "../../assets/images/done.png";
+import arrowLeft from "../assets/images/arrow-left.png";
+import arrowRight from "../assets/images/arrow-right.png";
+import done from "../assets/images/done.png";
 
 export default class Slider extends PureComponent {
   constructor(props) {

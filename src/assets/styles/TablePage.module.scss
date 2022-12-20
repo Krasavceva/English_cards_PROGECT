@@ -1,4 +1,4 @@
-@import "../App.scss";
+@import "./App.scss";
 
 .wrapper{
     display: flex;
@@ -17,16 +17,8 @@
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr ;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-    background-color: $base-color2;
+    border: 1px solid $base-color2;
    
-
-}
-.title__table{
-  text-align: center; 
-  color: white; 
-  font-family: $base-fontText;
-  font-size: $base-fontSize;
-  
 
 }
 
@@ -38,8 +30,15 @@
     width: fit-content;
     margin: 15px 5px;
     border: 1px solid $border;
-    box-shadow: 0 1px 0 $base-color;
     color: white;
 }
+
+.title__table{
+    text-align: center; 
+    color: $base-color3; 
+    font-family: $base-fontMain;
+    font-size: $base-fontSize;
+    margin-bottom: 20px;
+  }
 
 

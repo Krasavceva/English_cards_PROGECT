@@ -1,10 +1,10 @@
-@import "../App.scss";
+@import "./App.scss";
 
 .header{
     font-family: $base-fontMain;
     font-size: $base-fontSize;
     margin: 10px auto;
-    background-color: #282c34;
+    background-color: $base-color;
     color: white;
     margin-bottom: 50px;
     position: sticky;
@@ -21,6 +21,8 @@
     text-decoration: none;
     margin: 10px 15px;
 }
+
+
 .header__menu{
     display: flex;
     flex-direction: row;
@@ -28,11 +30,12 @@
     padding: 15px;
 }
 .header__logo{
-    margin-top: 15px;
+   text-align: center; 
 }
 .logo{
     max-width: 35%;
     display: block;
     margin: 0 auto;
     padding-bottom: 15px;
+    
 }

@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo1.png";
-import styles from "../Header/Header.module.scss";
+import styles from "../../assets/styles/Header.module.scss";
 
 const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.header__menu}>
-        <div className={styles.slogan}>
+        <div className="slogan">
           <Link to="/" className={styles.header__item}>
             THE LITTLE GENIUS WORKSHOP
           </Link>
         </div>
-
         <div className={styles.menu}>
           <Link to="/" className={styles.header__item}>
             Home
@@ -27,7 +26,6 @@ const Header = () => {
           </Link>
         </div>
       </div>
-
       <div className={styles.header__logo}>
         <Link to="/">
           <img src={logo} alt="logo" className={styles.logo} />

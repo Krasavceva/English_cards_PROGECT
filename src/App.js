@@ -1,55 +1,33 @@
 import React from "react";
 import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header/Header";
-import Slider from "./components/Slider/Slider";
+import GamePage from "./pages/GamePage";
 import Card from "./components/Card/Card";
-import Table from "./components/Table/Table";
+import TablePage from "./pages/TablePage";
 import Footer from "./components/Footer/Footer";
-import Gif from "./components/Error/Error";
-import Error from "./components/Error/Error";
+import ErrorPage from "./pages/ErrorPage";
 
-// const words = [
-//   {
-//     id: "12212",
-//     english: "animal ",
-//     transcription: "[ ˈæn.ɪ.məl ]",
-//     russian: "животное",
-//     tags: "животные",
-//     tags_json: '["u0436u0438u0432u043eu0442u043du044bu0435"]',
-//   },
-//   {
-//     id: "12516",
-//     english: "dog",
-//     transcription: "[dɒg]",
-//     russian: "собака",
-//     tags: "pets",
-//     tags_json: '["pets"]',
-//   },
-// ];
+import Words from "../../englishcards/src/api/words.json";
 
 function App() {
   return (
     <div className="App">
       <Header></Header>
       <Routes>
-        <Route path="/" element={<Table />} />
-        <Route path="/game" element={<Slider />} />
-        <Route path="/vocabulary" element={<Table />} />
-        <Route path="*" element={<Error />} />
+        <Route exact path="/" element={<TablePage />} />
+        <Route exact path="/game" element={<GamePage />} />
+        <Route exact path="/vocabulary" element={<TablePage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
+      //Перебор массива слов
+      {/* {Words.map((word, index) => (
+        <Card key={index} {...word} />
+      ))} */}
     </div>
   );
 }
 
 export default App;
-
-// {
-//       <div className="body">
-//         {words.map((word, index) => (
-//           <Card key={index} {...word} />
-//         ))}
-//       </div>
-// }
