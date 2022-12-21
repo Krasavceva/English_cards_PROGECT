@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import Card from "../components/Card/Card";
-import styles from "../assets/styles/GamePage.module.scss";
+import styles from "../styles/gamePage.module.scss";
 
 import arrowLeft from "../assets/images/arrow-left.png";
 import arrowRight from "../assets/images/arrow-right.png";

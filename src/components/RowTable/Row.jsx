@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "../../assets/styles/Row.module.scss";
+import styles from "../RowTable/row.module.scss";
 
 export default function Row(props) {
   const { english, transcription, russian, tags } = props;

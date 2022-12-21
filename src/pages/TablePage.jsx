@@ -1,6 +1,6 @@
 import React from "react";
 import Row from "../components/RowTable/Row";
-import styles from "../assets/styles/TablePage.module.scss";
+import styles from "../styles/tablePage.module.scss";
 import Words from "../api/words.json";
 import AddWord from "../components/Button/AddWord";
 

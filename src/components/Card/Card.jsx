@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import styles from "../../assets/styles/Card.module.scss";
+import styles from "../Card/card.module.scss";
 
 export default function Card(props) {
   const [isTranslate, setIsTranslate] = useState(false);

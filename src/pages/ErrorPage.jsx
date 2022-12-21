@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../assets/styles/ErrorPage.module.scss";
+import styles from "../styles/errorPage.module.scss";
 import Gif from "../assets/images/giphy.gif";
 
 export default function Error() {

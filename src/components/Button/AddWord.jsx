@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "../../assets/styles/AddWord.module.scss";
+import styles from "../Button/addWord.module.scss";
 
 function onClick() {
   return <input type="text" value="name" name="Hello" />;
