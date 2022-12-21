@@ -4,7 +4,7 @@ import styles from "../styles/tablePage.module.scss";
 import Words from "../api/words.json";
 import AddWord from "../components/Button/AddWord";
 
-export default function Table(props) {
+export default function Table() {
   return (
     <div className={styles.wrapper}>
       <h1> Vocabulary</h1>
