@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Card from "../Card/Card";
 
 export default function SliderFunc(props) {
+  const { english, transcription, russian, tags } = props;
   return (
     <div className="slider__container">
       <h1>Игра</h1>
