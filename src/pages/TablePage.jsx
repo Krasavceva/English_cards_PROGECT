@@ -1,7 +1,7 @@
 import React from "react";
 import Row from "../components/RowTable/Row";
 import styles from "../styles/tablePage.module.scss";
-import Words from "../api/words.json";
+import Words from "../Services/words.json";
 import AddWord from "../components/Button/AddWord";
 
 export default function Table() {

@@ -6,7 +6,7 @@ import Layout from "../../components/Layout/Layout";
 import GamePage from "../GamePage";
 import TablePage from "../TablePage";
 import ErrorPage from "../ErrorPage";
-
+import Card from "../../components/Card/Card";
 import SliderFunc from "../../components/SliderFunc/SliderFunc";
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
+      <Card />
       <SliderFunc />
     </div>
   );

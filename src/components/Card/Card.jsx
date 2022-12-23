@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "../Card/card.module.scss";
 
 export default function Card(props) {
+  const { english, transcription, russian } = props;
   const [isTranslate, setIsTranslate] = useState(false);
 
   function onClick() {
@@ -12,11 +13,11 @@ export default function Card(props) {
   return (
     <div className={styles.card__container}>
       <div className={styles.card}>
-        <p className={styles.english}>{props.english}</p>
-        <p className={styles.transcription}>{props.transcription}</p>
+        <p className={styles.english}>{english}</p>
+        <p className={styles.transcription}>{transcription}</p>
         {isTranslate ? (
           <div className={styles.russian} onClick={onClick}>
-            {props.russian}
+            {russian}
           </div>
         ) : (
           <button className={styles.btn} onClick={onClick}>
