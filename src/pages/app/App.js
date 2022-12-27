@@ -1,14 +1,13 @@
-import React from "react";
-import "../../styles/app.scss";
+import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import "../../styles/app.scss";
 import GetServices from "../../Services/GetServices";
 
 import Layout from "../../components/Layout/Layout";
-import GamePage from "../GamePage";
+import GamePage from "../../pages/GamePage";
 import TablePage from "../TablePage";
 import ErrorPage from "../ErrorPage";
 import Card from "../../components/Card/Card";
-import SliderFunc from "../../components/SliderFunc/SliderFunc";
 
 function App() {
   return (
@@ -21,8 +20,6 @@ function App() {
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
-      <Card />
-      <SliderFunc />
     </div>
   );
 }
