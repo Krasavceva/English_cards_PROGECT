@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/app.scss";
 import { Routes, Route } from "react-router-dom";
+import GetServices from "../../Services/GetServices";
 
 import Layout from "../../components/Layout/Layout";
 import GamePage from "../GamePage";

@@ -4,8 +4,6 @@ import GetServices from "../../Services/GetServices";
 import Card from "../Card/Card";
 
 export default function SliderFunc(props) {
-  const { english, transcription, russian, tags } = props;
-
   const [data, setData] = useState([]);
   const [index, setIndex] = useState(0);
 
@@ -24,12 +22,13 @@ export default function SliderFunc(props) {
   if (!data) {
     return <h1>Loading...</h1>;
   }
+
   return (
     <div className="slider__container">
       <h1>Игра</h1>
       <div>
         <button>Влево</button>
-        <Card />
+        <Card word={data[index]} />
         <button>Вправо</button>
       </div>
     </div>
