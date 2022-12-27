@@ -4,7 +4,7 @@ import Card from "../components/Card/Card";
 
 export default function SliderFunc() {
   const [posts, setPosts] = useState([]);
-  const [count, setCount] = useState(0);
+  const [index, setIndex] = useState(0);
 
   //2.Вызвали эту обработку в usEffect
   useEffect(() => {
@@ -18,15 +18,15 @@ export default function SliderFunc() {
   }
 
   function handlePrevClick() {
-    let result = count;
-    count--;
-    setCount(result);
+    let result = index;
+    result--;
+    setIndex(result);
   }
 
   function handleNextClick() {
-    let result = count;
-    count++;
-    setCount(result);
+    let result = index;
+    result++;
+    setIndex(result);
   }
 
   return (
@@ -34,7 +34,7 @@ export default function SliderFunc() {
       <h1>Игра</h1>
       <div>
         <button onClick={handlePrevClick}>Влево</button>
-        <Card item={posts[count]} />
+        <Card item={posts[index]} />
         <button onClick={handleNextClick}>Вправо</button>
       </div>
     </div>

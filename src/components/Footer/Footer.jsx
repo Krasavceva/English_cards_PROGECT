@@ -9,22 +9,18 @@ const Footer = () => {
         <img src={logo} className={styles.footer_logo} />
         <div className="footer__contact">
           <p>FlashVocabCards helps you to learn new words easely</p>
-          <p>&copy; 2022 Viktoria Krasavceva</p>
+          <p className="contact__item">
+            &copy;
+            <a
+              href="https://github.com/Krasavceva"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.contact__link}
+            >
+              2022 Victoria Krasavceva
+            </a>
+          </p>
         </div>
-      </div>
-      <div className={styles.footer__menu}>
-        <a href="#" className={styles.footer__item}>
-          HOME
-        </a>
-        <a href="#" className={styles.footer__item}>
-          CONTACT
-        </a>
-        <a href="#" className={styles.footer__item}>
-          ABOUT
-        </a>
-        <a href="#" className={styles.footer__item}>
-          FAQ
-        </a>
       </div>
     </div>
   );

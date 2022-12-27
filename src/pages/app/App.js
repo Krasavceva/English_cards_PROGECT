@@ -7,7 +7,7 @@ import Layout from "../../components/Layout/Layout";
 import GamePage from "../../pages/GamePage";
 import TablePage from "../TablePage";
 import ErrorPage from "../ErrorPage";
-import Card from "../../components/Card/Card";
+import ContactPage from "../ContactPage";
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
           <Route exact path="/" element={<TablePage />} />
           <Route exact path="/game" element={<GamePage />} />
           <Route exact path="/vocabulary" element={<TablePage />} />
+          <Route exact path="/contacts" element={<ContactPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
