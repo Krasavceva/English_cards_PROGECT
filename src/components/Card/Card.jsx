@@ -10,7 +10,7 @@ export default function Card({ item }) {
   }, [item]);
 
   if (!word) {
-    return <h1>Loading...</h1>;
+    return <h1 className="h1">КОНЕЦ ИГРЫ</h1>;
   }
 
   function onClick() {
