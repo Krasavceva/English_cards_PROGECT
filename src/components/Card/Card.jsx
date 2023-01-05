@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "../Card/card.module.scss";
+import { motion } from "framer-motion";
 
 export default function Card({ item }) {
   const [isTranslate, setIsTranslate] = useState(false);
@@ -18,7 +19,14 @@ export default function Card({ item }) {
   }
 
   return (
-    <div className={styles.card__container}>
+    <motion.div
+      className={styles.card__container}
+      animate={{
+        scale: [1, 1.2, 1.2, 1, 1],
+        rotate: [90, 0, 0],
+      }}
+      transition={{ duration: 1 }}
+    >
       <div className={styles.card}>
         <p className={styles.english}>{word.english}</p>
         <p className={styles.transcription}>{word.transcription}</p>
@@ -27,11 +35,16 @@ export default function Card({ item }) {
             {word.russian}
           </div>
         ) : (
-          <button className={styles.btn} onClick={onClick}>
+          <motion.button
+            className={styles.btn}
+            onClick={onClick}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9, x: "-5px", y: "5px" }}
+          >
             Проверить
-          </button>
+          </motion.button>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }

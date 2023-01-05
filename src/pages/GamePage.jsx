@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import GetServices from "../Services/GetServices";
 import Card from "../components/Card/Card";
 import styles from "../styles/gamePage.module.scss";
@@ -6,7 +6,6 @@ import styles from "../styles/gamePage.module.scss";
 export default function SliderFunc() {
   const [posts, setPosts] = useState([]);
   const [index, setIndex] = useState(0);
-  const [counter, setCounter] = useState(0);
 
   //2.Вызвали эту обработку в usEffect
   useEffect(() => {
@@ -34,19 +33,12 @@ export default function SliderFunc() {
     setIndex(result);
   }
 
-  const handleCount = () => {
-    setCounter(counter + 1);
-  };
-
   return (
     <div className="slider__container">
       <h1>Игра</h1>
-      <div className={styles.counter}>
-        Вы изучили {counter}/ слов за тренировку
-      </div>
       <div className={styles.gallery}>
         <button onClick={handlePrevClick}>Влево</button>
-        <Card item={posts[index]} count={handleCount} />
+        <Card item={posts[index]} />
         <button onClick={handleNextClick}>Вправо</button>
       </div>
     </div>
