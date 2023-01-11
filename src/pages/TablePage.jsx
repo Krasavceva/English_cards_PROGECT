@@ -7,7 +7,7 @@ import AddWord from "../components/Button/AddWord";
 export default function Table() {
   return (
     <div className={styles.wrapper}>
-      <h1> Vocabulary</h1>
+      <h1> VOCABULARY</h1>
       <div className={styles.row}>
         <div className={styles.title}>CЛОВО</div>
         <div className={styles.title}>ТРАНСКРИПЦИЯ</div>

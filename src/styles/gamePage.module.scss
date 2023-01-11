@@ -1,5 +1,6 @@
 @import "./App.scss";
 
+
 h1{
     color: white;
     text-align: center;
@@ -9,21 +10,14 @@ h1{
     justify-content: center;
     max-width: 70%;
     padding-left: 15%;
+    align-items: center;
 }
 .btn{
     margin-top: 60px;
-}
-.img__back,
-.img__next{
-    width: 3vw;
-    
 }
 
 .wordslist__index{
     color: white;
     text-align: center;
 }
-.img__done{
-    width: 30%;
-    display: flex;
-}
+

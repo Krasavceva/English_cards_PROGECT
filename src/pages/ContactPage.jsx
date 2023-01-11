@@ -1,7 +1,7 @@
 const Contacts = () => {
   return (
     <div className="contacts">
-      <h1>Our contacts:</h1>;
+      <h1>OUR CONTACTS:</h1>;
       <div>
         <li className="contact__item">
           <a href="mailto:krasavceva.va@gmail.com" className="contact__mail">

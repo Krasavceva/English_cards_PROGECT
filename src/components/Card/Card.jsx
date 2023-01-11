@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "../Card/card.module.scss";
 import { motion } from "framer-motion";
 
-export default function Card({ item }) {
-  const [isTranslate, setIsTranslate] = useState(false);
+export default function Card({ item, handleChange, pressed }) {
   const [word, setWords] = useState({});
 
   useEffect(() => {
@@ -12,10 +11,6 @@ export default function Card({ item }) {
 
   if (!word) {
     return <h1 className="h1">КОНЕЦ ИГРЫ</h1>;
-  }
-
-  function onClick() {
-    setIsTranslate(!isTranslate);
   }
 
   return (
@@ -30,14 +25,13 @@ export default function Card({ item }) {
       <div className={styles.card}>
         <p className={styles.english}>{word.english}</p>
         <p className={styles.transcription}>{word.transcription}</p>
-        {isTranslate ? (
-          <div className={styles.russian} onClick={onClick}>
+        {pressed ? (
+          <div className={styles.russian} onClick={handleChange}>
             {word.russian}
           </div>
         ) : (
           <motion.button
             className={styles.btn}
-            onClick={onClick}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9, x: "-5px", y: "5px" }}
           >

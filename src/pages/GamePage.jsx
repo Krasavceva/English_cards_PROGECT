@@ -6,6 +6,7 @@ import styles from "../styles/gamePage.module.scss";
 export default function SliderFunc() {
   const [posts, setPosts] = useState([]);
   const [index, setIndex] = useState(0);
+  const [pressed, setPressed] = useState(false);
 
   //2.Вызвали эту обработку в usEffect
   useEffect(() => {
@@ -25,6 +26,8 @@ export default function SliderFunc() {
     } else {
       setIndex = 0;
     }
+
+    setPressed(false);
   }
 
   function handleNextClick() {
@@ -33,13 +36,21 @@ export default function SliderFunc() {
     setIndex(result);
   }
 
+  const handleChange = () => {
+    setPressed(true);
+  };
+
   return (
-    <div className="slider__container">
-      <h1>Игра</h1>
+    <div className={styles.slider__container}>
+      <h1>GAME</h1>
       <div className={styles.gallery}>
-        <button onClick={handlePrevClick}>Влево</button>
-        <Card item={posts[index]} />
-        <button onClick={handleNextClick}>Вправо</button>
+        <button onClick={handlePrevClick}>PREV</button>
+        <Card
+          item={posts[index]}
+          pressed={pressed}
+          handleChange={handleChange}
+        />
+        <button onClick={handleNextClick}>NEXT</button>
       </div>
     </div>
   );
