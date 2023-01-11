@@ -26,14 +26,13 @@ export default function Card({ item, handleChange, pressed }) {
         <p className={styles.english}>{word.english}</p>
         <p className={styles.transcription}>{word.transcription}</p>
         {pressed ? (
-          <div className={styles.russian} onClick={handleChange}>
-            {word.russian}
-          </div>
+          <div className={styles.russian}>{word.russian}</div>
         ) : (
           <motion.button
             className={styles.btn}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9, x: "-5px", y: "5px" }}
+            onClick={handleChange}
           >
             Проверить
           </motion.button>

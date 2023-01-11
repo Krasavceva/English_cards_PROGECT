@@ -26,14 +26,13 @@ export default function SliderFunc() {
     } else {
       setIndex = 0;
     }
-
-    setPressed(false);
   }
 
   function handleNextClick() {
     let result = index;
     result++;
     setIndex(result);
+    setPressed(false);
   }
 
   const handleChange = () => {
