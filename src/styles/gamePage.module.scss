@@ -1,4 +1,5 @@
 @import "./App.scss";
+@import "./var.scss";
 
 
 h1{
@@ -18,6 +19,11 @@ h1{
 
 .wordslist__index{
     color: white;
+    text-align: center;
+}
+.counter{
+    color: white;
+    font-family: $base-fontMain;
     text-align: center;
 }
 
