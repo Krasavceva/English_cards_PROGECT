@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import GetServices from "../Services/GetServices";
 import Card from "../components/Card/Card";
 import styles from "../styles/gamePage.module.scss";
