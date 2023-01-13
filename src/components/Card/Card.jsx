@@ -7,9 +7,14 @@ export default function Card({ item, handleChange, pressed }) {
   const focusRef = useRef();
 
   useEffect(() => {
-    focusRef.current.focus();
     setWords(item);
   }, [item]);
+
+  useEffect(() => {
+    if (focusRef.current) {
+      focusRef.current.focus();
+    }
+  }, []);
 
   if (!word) {
     return <h1 className="h1">КОНЕЦ ИГРЫ</h1>;
@@ -28,9 +33,7 @@ export default function Card({ item, handleChange, pressed }) {
         <p className={styles.english}>{word.english}</p>
         <p className={styles.transcription}>{word.transcription}</p>
         {pressed ? (
-          <div ref={focusRef} className={styles.russian}>
-            {word.russian}{" "}
-          </div>
+          <div className={styles.russian}>{word.russian} </div>
         ) : (
           <motion.button
             className={styles.btn}
