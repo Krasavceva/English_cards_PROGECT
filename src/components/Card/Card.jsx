@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Card({ item, handleChange, pressed }) {
   const [word, setWords] = useState({});
+
   const focusRef = useRef();
 
   useEffect(() => {
@@ -20,21 +21,38 @@ export default function Card({ item, handleChange, pressed }) {
     return <h1 className="h1">КОНЕЦ ИГРЫ</h1>;
   }
 
-  return (
-    <motion.div
-      className={styles.card__container}
-      animate={{
-        scale: [1, 1.2, 1.2, 1, 1],
-        rotate: [90, 0, 0],
-      }}
-      transition={{ duration: 1 }}
-    >
-      <div className={styles.card}>
-        <p className={styles.english}>{word.english}</p>
-        <p className={styles.transcription}>{word.transcription}</p>
-        {pressed ? (
+  if (pressed === true)
+    return (
+      <motion.div
+        className={styles.card__container}
+        animate={{
+          scale: [1, 1.2, 1.2, 1, 1],
+          rotate: [90, 0, 0],
+        }}
+        transition={{ duration: 1 }}
+      >
+        <div className={styles.card}>
+          <h2 className={styles.english}>{word.english}</h2>
+          <p className={styles.transcription}>{word.transcription}</p>
           <div className={styles.russian}>{word.russian} </div>
-        ) : (
+        </div>
+      </motion.div>
+    );
+
+  if (pressed === false)
+    return (
+      <motion.div
+        className={styles.card__container}
+        animate={{
+          scale: [1, 1.2, 1.2, 1, 1],
+          rotate: [90, 0, 0],
+        }}
+        transition={{ duration: 1 }}
+      >
+        <div className={styles.card}>
+          <p className={styles.english}>{word.english}</p>
+          <p className={styles.transcription}>{word.transcription}</p>
+
           <motion.button
             className={styles.btn}
             whileHover={{ scale: 1.2 }}
@@ -44,8 +62,7 @@ export default function Card({ item, handleChange, pressed }) {
           >
             Проверить
           </motion.button>
-        )}
-      </div>
-    </motion.div>
-  );
+        </div>
+      </motion.div>
+    );
 }

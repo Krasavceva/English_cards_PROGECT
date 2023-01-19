@@ -24,6 +24,7 @@ export default function SliderFunc() {
     let result = index;
     if (result--) {
       setIndex(result);
+      setPressed(false);
     } else {
       setIndex = 0;
     }
@@ -55,7 +56,6 @@ export default function SliderFunc() {
           item={posts[index]}
           pressed={pressed}
           handleChange={handleChange}
-          count={handleCount}
         />
         <button onClick={handleNextClick}>NEXT</button>
       </div>
