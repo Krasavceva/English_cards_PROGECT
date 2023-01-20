@@ -8,6 +8,7 @@ export default function SliderFunc() {
   const [index, setIndex] = useState(0);
   const [pressed, setPressed] = useState(false);
   const [counter, setCounter] = useState(0);
+  const [arrId, setArrId] = useState([]);
 
   //2.Вызвали эту обработку в usEffect
   useEffect(() => {
@@ -38,6 +39,11 @@ export default function SliderFunc() {
   }
 
   const handleChange = () => {
+    const id = posts[index].id;
+    const copyIdTrue = arrId.filter((item) => item == id);
+    if (copyIdTrue.length < 1) {
+      setArrId([...arrId, id]);
+    }
     setPressed(true);
     handleCount();
   };
@@ -55,7 +61,9 @@ export default function SliderFunc() {
         <Card
           item={posts[index]}
           pressed={pressed}
+          setPressed={setPressed}
           handleChange={handleChange}
+          arrId={arrId}
         />
         <button onClick={handleNextClick}>NEXT</button>
       </div>

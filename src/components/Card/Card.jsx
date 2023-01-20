@@ -2,13 +2,23 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from "../Card/card.module.scss";
 import { motion } from "framer-motion";
 
-export default function Card({ item, handleChange, pressed }) {
+export default function Card({
+  item,
+  handleChange,
+  pressed,
+  setPressed,
+  arrId,
+}) {
   const [word, setWords] = useState({});
 
   const focusRef = useRef();
 
   useEffect(() => {
     setWords(item);
+    const copyId = arrId.filter((id) => id == item);
+    if (copyId < 1) {
+      setPressed(false);
+    }
   }, [item]);
 
   useEffect(() => {
