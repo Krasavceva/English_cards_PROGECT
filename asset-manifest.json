@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/English_cards_PROGECT/static/css/main.dd7fc761.css",
+    "main.js": "/English_cards_PROGECT/static/js/main.b1c13285.js",
+    "static/media/giphy.gif": "/English_cards_PROGECT/static/media/giphy.3c25accbaac4506c4741.gif",
+    "static/media/logo1.png": "/English_cards_PROGECT/static/media/logo1.d185bf758208c520f39a.png",
+    "index.html": "/English_cards_PROGECT/index.html",
+    "main.dd7fc761.css.map": "/English_cards_PROGECT/static/css/main.dd7fc761.css.map",
+    "main.b1c13285.js.map": "/English_cards_PROGECT/static/js/main.b1c13285.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd7fc761.css",
+    "static/js/main.b1c13285.js"
+  ]
+}
